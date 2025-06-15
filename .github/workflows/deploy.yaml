@@ -14,7 +14,8 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           tar -czf output.tar.gz -C ./nail_salon .
-          echo ${{ secrets.SSH_KEY }}
+          echo "${{ secrets.SSH_KEY }}"
+
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
