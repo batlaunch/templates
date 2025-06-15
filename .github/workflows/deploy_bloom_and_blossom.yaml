@@ -1,4 +1,4 @@
-name: Deploy Nail Salon template
+name: Deploy Bloom and Blossom template
 
 on: [ push ]
 
