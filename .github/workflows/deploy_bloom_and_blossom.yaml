@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          tar -czf output.tar.gz -C ./nail_salon .
+          tar -czf output.tar.gz -C ./bloom_and_blossom .
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
