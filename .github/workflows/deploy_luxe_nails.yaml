@@ -3,7 +3,7 @@ name: Deploy Nail Salon template
 on: [ push ]
 
 env:
-  dirname: /var/www/html/templates/nail_salon
+  dirname: /var/www/html/templates/luxe_nails
   IP_ADDRESS: '3.89.237.142'
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          tar -czf output.tar.gz -C ./nail_salon .
+          tar -czf output.tar.gz -C ./luxe_nails .
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -37,7 +37,6 @@ jobs:
           username: 'root'
           key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo chown ec2-user:ec2-user /var/www/html/
             sudo rm -rf ${{ env.dirname }}
             sudo mkdir ${{ env.dirname }}
 
