@@ -4,7 +4,7 @@ on: [ push ]
 
 
 env:
-  dirname: /var/www/templates/nail_salon
+  dirname: /var/www/html/templates/nail_salon
   IP_ADDRESS: '3.89.237.142'
 
 jobs:
