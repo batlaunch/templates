@@ -38,7 +38,7 @@ jobs:
           username: 'root'
           key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo chown ec2-user /var/www/html/
+            sudo chown ec2-user:ec2-user /var/www/html/
             sudo rm -rf ${{ env.dirname }}
             sudo mkdir ${{ env.dirname }}
 
