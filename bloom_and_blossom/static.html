@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloom & Blossom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* CSS Variables */
+    :root {
+      --color-bg: #fff5f8;
+      --color-primary: #ff6f91;
+      --color-secondary: #ffb3c1;
+      --color-accent: #ffdee9;
+      --color-text: #333;
+      --font-heading: 'Dancing Script', cursive;
+      --font-body: 'Poppins', sans-serif;
+    }
+
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 10;
+    }
+    .logo {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      color: var(--color-primary);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav ul li a {
+      font-weight: 500;
+      position: relative;
+      padding: 0.3rem 0;
+    }
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background: var(--color-primary);
+      transition: width 0.3s;
+    }
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      color: white;
+      padding: 0 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2), transparent 50%),
+                  radial-gradient(circle at 70% 70%, rgba(255,255,255,0.15), transparent 50%);
+      animation: float 10s ease-in-out infinite;
+      top: -50%;
+      left: -50%;
+    }
+    @keyframes float {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      50% { transform: translate(20%, 20%) rotate(45deg); }
+      100% { transform: translate(0, 0) rotate(0deg); }
+    }
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px rgba(0,0,0,0.2);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--color-bg);
+      color: var(--color-primary);
+      padding: 0.8rem 2rem;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: background 0.3s, transform 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn:hover {
+      background: var(--color-accent);
+      transform: scale(1.05);
+    }
+
+    /* Services Section */
+    .services {
+      padding: 4rem 2rem;
+      background: var(--color-accent);
+    }
+    .services h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: var(--color-primary);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: radial-gradient(circle, var(--color-secondary), transparent 70%);
+      border-radius: 50%;
+      top: -50px;
+      right: -50px;
+      opacity: 0.4;
+    }
+    .card h3 {
+      font-family: var(--font-heading);
+      margin-bottom: 1rem;
+      color: var(--color-primary);
+    }
+    .card p {
+      font-size: 0.95rem;
+    }
+
+    /* About Section */
+    .about {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .about h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--color-primary);
+    }
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1rem;
+      color: var(--color-text);
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 4rem 2rem;
+      background: var(--color-secondary);
+    }
+    .contact h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: var(--color-primary);
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 10px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+    }
+    .contact-form button {
+      background: var(--color-primary);
+      color: white;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .contact-form button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--color-bg);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--color-text);
+    }
+    footer a {
+      color: var(--color-primary);
+      margin: 0 0.5rem;
+      font-weight: 500;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.8rem; }
+      header { padding: 1rem; }
+      nav ul { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Bloom & Blossom</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Bloom & Blossom</h1>
+    <p>Your home for fresh and vibrant flowers. Explore our curated selection and bring nature's beauty into your space.</p>
+    <a href="#services" class="btn">Shop Now</a>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Our Collections</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Roses</h3>
+        <p>Classic and timeless, our roses come in a variety of colors to express any sentiment.</p>
+      </div>
+      <div class="card">
+        <h3>Tulips</h3>
+        <p>Bright and cheerful, tulips are perfect for spring arrangements and special occasions.</p>
+      </div>
+      <div class="card">
+        <h3>Daisies</h3>
+        <p>Simple and elegant, daisies bring a touch of innocence and charm to any bouquet.</p>
+      </div>
+      <div class="card">
+        <h3>Orchids</h3>
+        <p>Exotic and sophisticated, our orchids add a luxurious flair to your home or event.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>At Bloom & Blossom, we believe in delivering more than just flowers. We curate experiences that celebrate life's special moments. From hand-picked stems to personalized arrangements, our passion is to spread joy through the language of flowers.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bloom & Blossom. All rights reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+  </footer>
+</body>
+</html>
