@@ -1,0 +1,562 @@
+{% extends 'base.html' %}
+
+{% block title %}Our Services - Digital Solutions Hub{% endblock %}
+
+{% block content %}
+<!-- Services Hero Section -->
+<section class="page-hero">
+    <div class="container">
+        <div class="page-hero-content">
+            <h1>Our <span class="text-gradient">Services</span></h1>
+            <p>Comprehensive digital solutions to help your business thrive online</p>
+        </div>
+    </div>
+</section>
+
+<!-- Services Detail Section -->
+<section class="services-detail">
+    <div class="container">
+        <!-- Website Development -->
+        <div class="service-detail-item" id="websites">
+            <div class="service-detail-content animate-on-scroll">
+                <h2>Website Development</h2>
+                <p class="service-tagline">Custom websites that convert visitors into customers</p>
+                <p>Our expert team creates stunning, responsive websites tailored to your business needs. We focus on user experience, performance, and conversion optimization to ensure your website not only looks great but also drives results.</p>
+                
+                <div class="service-features">
+                    <div class="feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Responsive Design</h4>
+                        <p>Websites that look perfect on all devices - desktop, tablet, and mobile.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Lightning Fast</h4>
+                        <p>Optimized for speed to provide the best user experience and SEO benefits.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-lock"></i>
+                        <h4>Secure & Reliable</h4>
+                        <p>Built with security best practices and regular maintenance options.</p>
+                    </div>
+                </div>
+                
+                <div class="service-pricing">
+                    <h3>Pricing Options</h3>
+                    <div class="pricing-cards">
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">Basic Website</h4>
+                                <div class="pricing-price">$999<span>/one-time</span></div>
+                                <p class="pricing-description">Perfect for small businesses just getting started online</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> Up to 5 pages</li>
+                                <li><i class="fas fa-check"></i> Mobile responsive design</li>
+                                <li><i class="fas fa-check"></i> Contact form</li>
+                                <li><i class="fas fa-check"></i> Basic SEO setup</li>
+                                <li class="disabled"><i class="fas fa-times"></i> E-commerce functionality</li>
+                                <li class="disabled"><i class="fas fa-times"></i> Custom animations</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                        
+                        <div class="pricing-card featured">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">Business Website</h4>
+                                <div class="pricing-price">$2,499<span>/one-time</span></div>
+                                <p class="pricing-description">Comprehensive solution for established businesses</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> Up to 10 pages</li>
+                                <li><i class="fas fa-check"></i> Mobile responsive design</li>
+                                <li><i class="fas fa-check"></i> Advanced contact forms</li>
+                                <li><i class="fas fa-check"></i> Complete SEO setup</li>
+                                <li><i class="fas fa-check"></i> Content management system</li>
+                                <li><i class="fas fa-check"></i> Custom animations</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                        
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">E-commerce Website</h4>
+                                <div class="pricing-price">$4,999<span>/one-time</span></div>
+                                <p class="pricing-description">Complete online store with payment processing</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> Unlimited products</li>
+                                <li><i class="fas fa-check"></i> Secure payment gateway</li>
+                                <li><i class="fas fa-check"></i> Inventory management</li>
+                                <li><i class="fas fa-check"></i> Customer accounts</li>
+                                <li><i class="fas fa-check"></i> Order tracking</li>
+                                <li><i class="fas fa-check"></i> Marketing integrations</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-detail-image animate-on-scroll">
+                <img src="{{ url_for('static', filename='images/website-development.png') }}" alt="Website development process showing design mockups and code">
+            </div>
+        </div>
+        
+        <!-- SEO Optimization -->
+        <div class="service-detail-item" id="seo">
+            <div class="service-detail-image animate-on-scroll">
+                <img src="{{ url_for('static', filename='images/seo-optimization.png') }}" alt="SEO optimization dashboard showing keyword rankings and traffic analytics">
+            </div>
+            <div class="service-detail-content animate-on-scroll">
+                <h2>SEO Optimization</h2>
+                <p class="service-tagline">Boost your visibility and drive organic traffic</p>
+                <p>Our comprehensive SEO strategies help your business rank higher in search results, attract more qualified traffic, and increase conversions. We use data-driven approaches to deliver sustainable, long-term results.</p>
+                
+                <div class="service-features">
+                    <div class="feature">
+                        <i class="fas fa-search"></i>
+                        <h4>Keyword Research</h4>
+                        <p>Identifying the most valuable search terms for your business.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-file-alt"></i>
+                        <h4>On-Page Optimization</h4>
+                        <p>Optimizing your website content and structure for search engines.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-link"></i>
+                        <h4>Link Building</h4>
+                        <p>Building high-quality backlinks to boost your domain authority.</p>
+                    </div>
+                </div>
+                
+                <div class="service-pricing">
+                    <h3>Pricing Options</h3>
+                    <div class="pricing-cards">
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">Basic SEO</h4>
+                                <div class="pricing-price">$799<span>/month</span></div>
+                                <p class="pricing-description">Essential SEO services for small businesses</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> Keyword research</li>
+                                <li><i class="fas fa-check"></i> On-page optimization</li>
+                                <li><i class="fas fa-check"></i> Monthly reporting</li>
+                                <li class="disabled"><i class="fas fa-times"></i> Content creation</li>
+                                <li class="disabled"><i class="fas fa-times"></i> Link building</li>
+                                <li class="disabled"><i class="fas fa-times"></i> Local SEO</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                        
+                        <div class="pricing-card featured">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">Professional SEO</h4>
+                                <div class="pricing-price">$1,499<span>/month</span></div>
+                                <p class="pricing-description">Comprehensive SEO for growing businesses</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> Advanced keyword research</li>
+                                <li><i class="fas fa-check"></i> On-page optimization</li>
+                                <li><i class="fas fa-check"></i> Content creation (4 articles/mo)</li>
+                                <li><i class="fas fa-check"></i> Link building</li>
+                                <li><i class="fas fa-check"></i> Weekly reporting</li>
+                                <li><i class="fas fa-check"></i> Local SEO</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                        
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">Enterprise SEO</h4>
+                                <div class="pricing-price">$2,999<span>/month</span></div>
+                                <p class="pricing-description">Advanced SEO for established businesses</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> Comprehensive keyword strategy</li>
+                                <li><i class="fas fa-check"></i> Technical SEO audit</li>
+                                <li><i class="fas fa-check"></i> Content creation (8 articles/mo)</li>
+                                <li><i class="fas fa-check"></i> Premium link building</li>
+                                <li><i class="fas fa-check"></i> Competitor analysis</li>
+                                <li><i class="fas fa-check"></i> Dedicated SEO manager</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Cold Email Marketing -->
+        <div class="service-detail-item" id="email">
+            <div class="service-detail-content animate-on-scroll">
+                <h2>Cold Email Marketing</h2>
+                <p class="service-tagline">Connect with potential clients and generate leads</p>
+                <p>Our cold email marketing campaigns help you reach decision-makers and generate high-quality leads. We craft personalized, compelling messages that resonate with your target audience and drive responses.</p>
+                
+                <div class="service-features">
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <h4>Audience Research</h4>
+                        <p>Identifying and targeting the right prospects for your business.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-pen"></i>
+                        <h4>Compelling Copy</h4>
+                        <p>Creating personalized messages that generate responses.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Performance Tracking</h4>
+                        <p>Monitoring open rates, responses, and conversions.</p>
+                    </div>
+                </div>
+                
+                <div class="service-pricing">
+                    <h3>Pricing Options</h3>
+                    <div class="pricing-cards">
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">Starter</h4>
+                                <div class="pricing-price">$599<span>/month</span></div>
+                                <p class="pricing-description">Basic cold email campaigns for small businesses</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> 500 emails/month</li>
+                                <li><i class="fas fa-check"></i> Basic targeting</li>
+                                <li><i class="fas fa-check"></i> 2 email templates</li>
+                                <li><i class="fas fa-check"></i> Monthly reporting</li>
+                                <li class="disabled"><i class="fas fa-times"></i> A/B testing</li>
+                                <li class="disabled"><i class="fas fa-times"></i> CRM integration</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                        
+                        <div class="pricing-card featured">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">Growth</h4>
+                                <div class="pricing-price">$1,199<span>/month</span></div>
+                                <p class="pricing-description">Advanced campaigns for growing businesses</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> 2,000 emails/month</li>
+                                <li><i class="fas fa-check"></i> Advanced targeting</li>
+                                <li><i class="fas fa-check"></i> 5 email templates</li>
+                                <li><i class="fas fa-check"></i> A/B testing</li>
+                                <li><i class="fas fa-check"></i> Weekly reporting</li>
+                                <li><i class="fas fa-check"></i> CRM integration</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                        
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">Enterprise</h4>
+                                <div class="pricing-price">$2,499<span>/month</span></div>
+                                <p class="pricing-description">Comprehensive solution for large businesses</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> 5,000+ emails/month</li>
+                                <li><i class="fas fa-check"></i> Custom targeting</li>
+                                <li><i class="fas fa-check"></i> Unlimited templates</li>
+                                <li><i class="fas fa-check"></i> Advanced A/B testing</li>
+                                <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                                <li><i class="fas fa-check"></i> Full CRM integration</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-detail-image animate-on-scroll">
+                <img src="{{ url_for('static', filename='images/email-marketing.png') }}" alt="Email marketing campaign dashboard showing open rates and response metrics">
+            </div>
+        </div>
+        
+        <!-- Facebook Ads -->
+        <div class="service-detail-item" id="facebook">
+            <div class="service-detail-image animate-on-scroll">
+                <img src="{{ url_for('static', filename='images/facebook-ads.png') }}" alt="Facebook ads manager showing campaign performance and audience targeting">
+            </div>
+            <div class="service-detail-content animate-on-scroll">
+                <h2>Facebook Ads</h2>
+                <p class="service-tagline">Target your ideal customers with precision</p>
+                <p>Our Facebook advertising services help you reach your target audience, generate leads, and drive sales. We create and manage campaigns that deliver impressive ROI through strategic targeting and compelling ad creative.</p>
+                
+                <div class="service-features">
+                    <div class="feature">
+                        <i class="fas fa-bullseye"></i>
+                        <h4>Precise Targeting</h4>
+                        <p>Reaching your ideal customers based on demographics, interests, and behaviors.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-paint-brush"></i>
+                        <h4>Engaging Creative</h4>
+                        <p>Eye-catching visuals and compelling copy that drive action.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-cog"></i>
+                        <h4>Campaign Optimization</h4>
+                        <p>Continuous testing and refinement to maximize performance.</p>
+                    </div>
+                </div>
+                
+                <div class="service-pricing">
+                    <h3>Pricing Options</h3>
+                    <div class="pricing-cards">
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">Basic</h4>
+                                <div class="pricing-price">$799<span>/month</span></div>
+                                <p class="pricing-description">+ Ad spend (min. $500/mo recommended)</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> 2 ad campaigns</li>
+                                <li><i class="fas fa-check"></i> 4 ad creatives</li>
+                                <li><i class="fas fa-check"></i> Basic audience targeting</li>
+                                <li><i class="fas fa-check"></i> Monthly reporting</li>
+                                <li class="disabled"><i class="fas fa-times"></i> Retargeting campaigns</li>
+                                <li class="disabled"><i class="fas fa-times"></i> Custom landing pages</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                        
+                        <div class="pricing-card featured">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">Professional</h4>
+                                <div class="pricing-price">$1,499<span>/month</span></div>
+                                <p class="pricing-description">+ Ad spend (min. $1,000/mo recommended)</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> 5 ad campaigns</li>
+                                <li><i class="fas fa-check"></i> 10 ad creatives</li>
+                                <li><i class="fas fa-check"></i> Advanced audience targeting</li>
+                                <li><i class="fas fa-check"></i> Retargeting campaigns</li>
+                                <li><i class="fas fa-check"></i> Weekly optimization</li>
+                                <li><i class="fas fa-check"></i> Basic landing pages</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                        
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">Enterprise</h4>
+                                <div class="pricing-price">$2,999<span>/month</span></div>
+                                <p class="pricing-description">+ Ad spend (min. $2,500/mo recommended)</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> Unlimited campaigns</li>
+                                <li><i class="fas fa-check"></i> Unlimited ad creatives</li>
+                                <li><i class="fas fa-check"></i> Custom audience creation</li>
+                                <li><i class="fas fa-check"></i> Advanced retargeting</li>
+                                <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                                <li><i class="fas fa-check"></i> Custom landing pages</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Content Creation -->
+        <div class="service-detail-item" id="content">
+            <div class="service-detail-content animate-on-scroll">
+                <h2>Content Creation</h2>
+                <p class="service-tagline">Engage your audience with high-quality content</p>
+                <p>Our content creation services help you establish authority, build trust, and engage your target audience. We create compelling blog posts, articles, videos, and social media content that resonates with your customers.</p>
+                
+                <div class="service-features">
+                    <div class="feature">
+                        <i class="fas fa-pencil-alt"></i>
+                        <h4>Blog Posts & Articles</h4>
+                        <p>SEO-optimized content that educates and engages your audience.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-camera"></i>
+                        <h4>Visual Content</h4>
+                        <p>Eye-catching graphics, infographics, and videos.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-share-alt"></i>
+                        <h4>Social Media Content</h4>
+                        <p>Engaging posts that drive interaction and build community.</p>
+                    </div>
+                </div>
+                
+                <div class="service-pricing">
+                    <h3>Pricing Options</h3>
+                    <div class="pricing-cards">
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">Basic</h4>
+                                <div class="pricing-price">$699<span>/month</span></div>
+                                <p class="pricing-description">Essential content for small businesses</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> 4 blog posts/month</li>
+                                <li><i class="fas fa-check"></i> 8 social media posts</li>
+                                <li><i class="fas fa-check"></i> Basic SEO optimization</li>
+                                <li class="disabled"><i class="fas fa-times"></i> Custom graphics</li>
+                                <li class="disabled"><i class="fas fa-times"></i> Video content</li>
+                                <li class="disabled"><i class="fas fa-times"></i> Content strategy</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                        
+                        <div class="pricing-card featured">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">Professional</h4>
+                                <div class="pricing-price">$1,299<span>/month</span></div>
+                                <p class="pricing-description">Comprehensive content for growing businesses</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> 8 blog posts/month</li>
+                                <li><i class="fas fa-check"></i> 16 social media posts</li>
+                                <li><i class="fas fa-check"></i> Advanced SEO optimization</li>
+                                <li><i class="fas fa-check"></i> Custom graphics</li>
+                                <li><i class="fas fa-check"></i> 1 video/month</li>
+                                <li><i class="fas fa-check"></i> Content strategy</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                        
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">Enterprise</h4>
+                                <div class="pricing-price">$2,499<span>/month</span></div>
+                                <p class="pricing-description">Premium content for established businesses</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> 16 blog posts/month</li>
+                                <li><i class="fas fa-check"></i> 30 social media posts</li>
+                                <li><i class="fas fa-check"></i> Premium SEO optimization</li>
+                                <li><i class="fas fa-check"></i> Custom graphics & infographics</li>
+                                <li><i class="fas fa-check"></i> 3 videos/month</li>
+                                <li><i class="fas fa-check"></i> Comprehensive content strategy</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-detail-image animate-on-scroll">
+                <img src="{{ url_for('static', filename='images/content-creation.png') }}" alt="Content creation process showing blog articles, social media posts, and video production">
+            </div>
+        </div>
+        
+        <!-- Analytics & Reporting -->
+        <div class="service-detail-item" id="analytics">
+            <div class="service-detail-image animate-on-scroll">
+                <img src="{{ url_for('static', filename='images/analytics.png') }}" alt="Analytics dashboard showing website traffic, conversion rates, and user behavior metrics">
+            </div>
+            <div class="service-detail-content animate-on-scroll">
+                <h2>Analytics & Reporting</h2>
+                <p class="service-tagline">Make data-driven decisions for your business</p>
+                <p>Our analytics and reporting services provide you with actionable insights to optimize your digital marketing efforts. We track key metrics, analyze performance, and deliver clear reports that help you make informed decisions.</p>
+                
+                <div class="service-features">
+                    <div class="feature">
+                        <i class="fas fa-chart-bar"></i>
+                        <h4>Performance Tracking</h4>
+                        <p>Monitoring key metrics across all your digital channels.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Actionable Insights</h4>
+                        <p>Translating data into clear recommendations.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-file-alt"></i>
+                        <h4>Custom Reports</h4>
+                        <p>Clear, comprehensive reports tailored to your business goals.</p>
+                    </div>
+                </div>
+                
+                <div class="service-pricing">
+                    <h3>Pricing Options</h3>
+                    <div class="pricing-cards">
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">Basic</h4>
+                                <div class="pricing-price">$299<span>/month</span></div>
+                                <p class="pricing-description">Essential analytics for small businesses</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> Website traffic analysis</li>
+                                <li><i class="fas fa-check"></i> Monthly reports</li>
+                                <li><i class="fas fa-check"></i> Basic recommendations</li>
+                                <li class="disabled"><i class="fas fa-times"></i> Conversion tracking</li>
+                                <li class="disabled"><i class="fas fa-times"></i> Custom dashboards</li>
+                                <li class="disabled"><i class="fas fa-times"></i> Competitive analysis</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                        
+                        <div class="pricing-card featured">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">Professional</h4>
+                                <div class="pricing-price">$599<span>/month</span></div>
+                                <p class="pricing-description">Comprehensive analytics for growing businesses</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> Website traffic analysis</li>
+                                <li><i class="fas fa-check"></i> Conversion tracking</li>
+                                <li><i class="fas fa-check"></i> Weekly reports</li>
+                                <li><i class="fas fa-check"></i> Detailed recommendations</li>
+                                <li><i class="fas fa-check"></i> Custom dashboards</li>
+                                <li class="disabled"><i class="fas fa-times"></i> Competitive analysis</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                        
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h4 class="pricing-name">Enterprise</h4>
+                                <div class="pricing-price">$999<span>/month</span></div>
+                                <p class="pricing-description">Advanced analytics for established businesses</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> Comprehensive data analysis</li>
+                                <li><i class="fas fa-check"></i> Advanced conversion tracking</li>
+                                <li><i class="fas fa-check"></i> Real-time reporting</li>
+                                <li><i class="fas fa-check"></i> Strategic recommendations</li>
+                                <li><i class="fas fa-check"></i> Custom dashboards</li>
+                                <li><i class="fas fa-check"></i> Competitive analysis</li>
+                            </ul>
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary pricing-btn">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+    <div class="container">
+        <div class="cta-content animate-on-scroll">
+            <h2>Ready to Elevate Your Digital Presence?</h2>
+            <p>Contact us today to discuss how our services can help your business grow online.</p>
+            <div class="cta-buttons">
+                <a href="{{ url_for('contact') }}" class="btn btn-primary">Get in Touch</a>
+                <a href="{{ url_for('pricing') }}" class="btn btn-outline">View All Pricing</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
