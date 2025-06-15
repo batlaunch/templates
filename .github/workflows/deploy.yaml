@@ -2,7 +2,6 @@ name: Deploy Nail Salon template
 
 on: [ push ]
 
-
 env:
   dirname: /home/ec2-user/www/templates/nail_salon
   IP_ADDRESS: '3.89.237.142'
