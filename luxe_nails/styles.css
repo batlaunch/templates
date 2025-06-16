@@ -156,13 +156,21 @@ h3 {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 100px 20px 50px;
+
+
     background: linear-gradient(135deg, #ffeef8, #fff0f5);
     position: relative;
     overflow: hidden;
+}
+
+.hero-inner {
+    padding: 100px 20px 50px;
+    display: flex; 
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+
 }
 
 .hero::before {
@@ -350,6 +358,7 @@ h3 {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    transform: scale(1);
 }
 
 .gallery-overlay {
@@ -637,7 +646,7 @@ h3 {
         font-size: 2rem;
     }
     
-    .hero {
+    .hero-inner {
         flex-direction: column;
         text-align: center;
         padding: 120px 20px 50px;

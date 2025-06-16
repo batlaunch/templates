@@ -85,15 +85,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Gallery image hover effects
     const galleryItems = document.querySelectorAll('.gallery-item');
-    galleryItems.forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.02)';
-        });
+    // galleryItems.forEach(item => {
+    //     item.addEventListener('mouseenter', function() {
+    //         this.style.transform = 'scale(1.02)';
+    //     });
         
-        item.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
-        });
-    });
+    //     item.addEventListener('mouseleave', function() {
+    //         this.style.transform = 'scale(1)';
+    //     });
+    // });
 
     // Service card animations on scroll
     const observerOptions = {
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Set initial opacity
         img.style.opacity = '0';
-        img.style.transition = 'opacity 0.3s ease';
+        img.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
         
         // If image is already loaded
         if (img.complete) {
