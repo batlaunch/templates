@@ -1,9 +1,9 @@
-name: Deploy Bloom and Blossom template
+name: Deploy Classic Cuts template
 
 on: [ push ]
 
 env:
-  dirname: /var/www/html/templates/bloom_and_blossom
+  dirname: /var/www/html/templates/classic_cuts
   IP_ADDRESS: '3.89.237.142'
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          tar -czf output.tar.gz -C ./bloom_and_blossom .
+          tar -czf output.tar.gz -C ./classic_cuts .
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
