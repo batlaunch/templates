@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenScape Professionals - Professional Landscaping Services</title>
+    <meta name="description" content="Transform your outdoor space with GreenScape Professionals. Expert landscaping design, installation, and maintenance services for residential and commercial properties.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>GreenScape Professionals</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Transform Your Outdoor Space Into a Beautiful Landscape</h1>
+            <p class="hero-subtitle">Professional landscaping services that bring your vision to life. From design to installation and maintenance, we create stunning outdoor environments that enhance your property's beauty and value.</p>
+            <a href="#contact" class="cta-button">Get Your Free Consultation Today</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/image3.jpg" alt="Beautiful landscaped garden" />
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Landscaping Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Landscape Design & Installation</h3>
+                    <p>Create the outdoor space of your dreams with our custom landscape design services. Our experienced team works with you to develop a comprehensive plan that reflects your style, meets your needs, and fits your budget.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Garden Maintenance & Care</h3>
+                    <p>Keep your landscape looking its best year-round with our professional maintenance services. From regular lawn care to seasonal plantings, we ensure your outdoor space remains healthy and beautiful.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Hardscaping Solutions</h3>
+                    <p>Enhance your property with durable and attractive hardscape features. We specialize in patios, walkways, retaining walls, and outdoor living spaces that add functionality and value to your home.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Lawn Care & Irrigation</h3>
+                    <p>Achieve a lush, green lawn with our comprehensive lawn care services. We provide fertilization, weed control, aeration, and efficient irrigation systems to keep your grass healthy and vibrant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Work</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal('images/image1.jpg')">
+                    <img src="images/image1.jpg" alt="Professional landscaper at work">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/image2.jpg')">
+                    <img src="images/image2.jpg" alt="Beautiful garden landscape">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/image4.jpg')">
+                    <img src="images/image4.jpg" alt="Landscape lighting design">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/image5.jpg')">
+                    <img src="images/image5.jpg" alt="Professional landscaping service">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/image6.jpg')">
+                    <img src="images/image6.jpg" alt="Hardscaping installation">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Why Choose GreenScape Professionals?</h2>
+                    <p>With over 15 years of experience in the landscaping industry, GreenScape Professionals has built a reputation for excellence in design, installation, and maintenance. Our team of certified landscapers and horticulturists brings creativity, expertise, and attention to detail to every project.</p>
+                    <p>We believe that every outdoor space has the potential to be extraordinary. Whether you're looking to create a peaceful garden retreat, an entertaining area for family and friends, or a professional landscape for your business, we have the skills and passion to make it happen.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>15+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Satisfaction Rate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/image3.jpg" alt="Professional landscaping team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"GreenScape Professionals transformed our backyard into an amazing outdoor living space. The team was professional, creative, and delivered exactly what they promised. We couldn't be happier with the results!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Sarah M.</h4>
+                        <span>Homeowner</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"The attention to detail and quality of work exceeded our expectations. Our commercial property looks fantastic, and we've received numerous compliments from tenants and visitors."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Mike R.</h4>
+                        <span>Property Manager</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"From the initial consultation to the final installation, the entire process was smooth and professional. They really listened to our ideas and created something even better than we imagined."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Jennifer L.</h4>
+                        <span>Homeowner</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get Started Today</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@greenscapepro.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Garden Lane, Greenville, State 12345</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Mon-Fri: 8AM-6PM, Sat: 9AM-4PM</span>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Select a Service</option>
+                            <option value="design">Landscape Design & Installation</option>
+                            <option value="maintenance">Garden Maintenance & Care</option>
+                            <option value="hardscaping">Hardscaping Solutions</option>
+                            <option value="lawn-care">Lawn Care & Irrigation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Tell us about your project" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GreenScape Professionals</h3>
+                    <p>Transforming outdoor spaces with professional landscaping services for over 15 years.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Landscape Design</li>
+                        <li>Garden Maintenance</li>
+                        <li>Hardscaping</li>
+                        <li>Lawn Care</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Email: info@greenscapepro.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GreenScape Professionals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Gallery -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
