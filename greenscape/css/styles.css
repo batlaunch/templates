@@ -100,15 +100,23 @@ body {
     align-items: center;
     padding: 100px 20px 50px;
     background: linear-gradient(135deg, #f8fffe 0%, #e8f5e8 100%);
+    overflow: hidden;
+
+
+}
+
+.hero-inner {
+    gap: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .hero-content {
-    max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+
 }
 
 .hero-title {

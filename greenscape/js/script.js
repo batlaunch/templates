@@ -72,15 +72,15 @@ document.addEventListener('keydown', function(e) {
 
 // Contact Form Handling
 document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+    e.preventDefault()
     
     // Get form data
-    const formData = new FormData(this);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const phone = formData.get('phone');
-    const service = formData.get('service');
-    const message = formData.get('message');
+    const formData = new FormData(this)
+    const name = formData.get('name')
+    const email = formData.get('email')
+    const phone = formData.get('phone')
+    const service = formData.get('service')
+    const message = formData.get('message')
     
     // Basic validation
     if (!name || !email || !service || !message) {
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Counter animation for stats
-function animateCounter(element, target, duration = 2000) {
+function animateCounter(element, target, duration = 600) {
     let start = 0;
     const increment = target / (duration / 16);
     
