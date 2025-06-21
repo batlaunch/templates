@@ -1,6 +1,6 @@
 // Mobile Navigation Toggle
 const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('.nav-menu');
+const navMenu = document.querySelector('.nav-menu-outer');
 
 navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
@@ -33,11 +33,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+        // navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        // navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        // navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        // navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
     }
 });
 
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Parallax effect for hero section
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
-    const heroImage = document.querySelector('.hero-image img');
+    const heroImage = document.querySelector('.hero-image');
     if (heroImage) {
         heroImage.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
@@ -189,15 +189,15 @@ window.addEventListener('load', () => {
 });
 
 // Service card hover effects
-document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px) scale(1.02)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-    });
-});
+// document.querySelectorAll('.service-card').forEach(card => {
+//     card.addEventListener('mouseenter', function() {
+//         this.style.transform = 'translateY(-10px) scale(1.02)';
+//     });
+//
+//     card.addEventListener('mouseleave', function() {
+//         this.style.transform = 'translateY(0) scale(1)';
+//     });
+// });
 
 // Gallery item click tracking
 document.querySelectorAll('.gallery-item').forEach(item => {
