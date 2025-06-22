@@ -1,325 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bloom & Blossom</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    /* CSS Variables */
-    :root {
-      --color-bg: #fff5f8;
-      --color-primary: #ff6f91;
-      --color-secondary: #ffb3c1;
-      --color-accent: #ffdee9;
-      --color-text: #333;
-      --font-heading: 'Dancing Script', cursive;
-      --font-body: 'Poppins', sans-serif;
-    }
-
-    /* Global Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: var(--font-body);
-      background: var(--color-bg);
-      color: var(--color-text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Header */
-    header {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      z-index: 10;
-    }
-    .logo {
-      font-family: var(--font-heading);
-      font-size: 1.8rem;
-      color: var(--color-primary);
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-    nav ul li a {
-      font-weight: 500;
-      position: relative;
-      padding: 0.3rem 0;
-    }
-    nav ul li a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 0;
-      height: 2px;
-      background: var(--color-primary);
-      transition: width 0.3s;
-    }
-    nav ul li a:hover::after {
-      width: 100%;
-    }
-
-    /* Hero Section */
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-      color: white;
-      padding: 0 1rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2), transparent 50%),
-                  radial-gradient(circle at 70% 70%, rgba(255,255,255,0.15), transparent 50%);
-      animation: float 10s ease-in-out infinite;
-      top: -50%;
-      left: -50%;
-    }
-    @keyframes float {
-      0% { transform: translate(0, 0) rotate(0deg); }
-      50% { transform: translate(20%, 20%) rotate(45deg); }
-      100% { transform: translate(0, 0) rotate(0deg); }
-    }
-    .hero h1 {
-      font-family: var(--font-heading);
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px rgba(0,0,0,0.2);
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      max-width: 600px;
-    }
-    .btn {
-      display: inline-block;
-      background: var(--color-bg);
-      color: var(--color-primary);
-      padding: 0.8rem 2rem;
-      font-weight: 600;
-      border-radius: 50px;
-      transition: background 0.3s, transform 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-    .btn:hover {
-      background: var(--color-accent);
-      transform: scale(1.05);
-    }
-
-    /* Services Section */
-    .services {
-      padding: 4rem 2rem;
-      background: var(--color-accent);
-    }
-    .services h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      color: var(--color-primary);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .card {
-      background: white;
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-    }
-    .card::before {
-      content: '';
-      position: absolute;
-      width: 150px;
-      height: 150px;
-      background: radial-gradient(circle, var(--color-secondary), transparent 70%);
-      border-radius: 50%;
-      top: -50px;
-      right: -50px;
-      opacity: 0.4;
-    }
-    .card h3 {
-      font-family: var(--font-heading);
-      margin-bottom: 1rem;
-      color: var(--color-primary);
-    }
-    .card p {
-      font-size: 0.95rem;
-    }
-
-    /* About Section */
-    .about {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    .about h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: var(--color-primary);
-    }
-    .about p {
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 1rem;
-      color: var(--color-text);
-    }
-
-    /* Contact Section */
-    .contact {
-      padding: 4rem 2rem;
-      background: var(--color-secondary);
-    }
-    .contact h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      color: var(--color-primary);
-    }
-    .contact-form {
-      max-width: 600px;
-      margin: 0 auto;
-      display: grid;
-      gap: 1rem;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      padding: 0.8rem;
-      border: none;
-      border-radius: 10px;
-      font-family: var(--font-body);
-      font-size: 1rem;
-    }
-    .contact-form button {
-      background: var(--color-primary);
-      color: white;
-      padding: 0.8rem;
-      border: none;
-      border-radius: 50px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-    .contact-form button:hover {
-      transform: scale(1.05);
-    }
-
-    /* Footer */
-    footer {
-      background: var(--color-bg);
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-      color: var(--color-text);
-    }
-    footer a {
-      color: var(--color-primary);
-      margin: 0 0.5rem;
-      font-weight: 500;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.8rem; }
-      header { padding: 1rem; }
-      nav ul { gap: 1rem; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom & Blossom - Premium Floral Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="logo">Bloom & Blossom</div>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#services">Shop</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <!-- Floating Navigation -->
+    <nav class="floating-nav" id="floatingNav">
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" data-section="home">Home</a></li>
+            <li><a href="#gallery" data-section="gallery">Gallery</a></li>
+            <li><a href="#services" data-section="services">Services</a></li>
+            <li><a href="#about" data-section="about">About</a></li>
+            <li><a href="#contact" data-section="contact">Contact</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Welcome to Bloom & Blossom</h1>
-    <p>Your home for fresh and vibrant flowers. Explore our curated selection and bring nature's beauty into your space.</p>
-    <a href="#services" class="btn">Shop Now</a>
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <img src="images/cherry_blossoms.jpg" alt="Beautiful cherry blossoms" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Bloom & Blossom</h1>
+            <p class="hero-subtitle">Creating magical moments with nature's finest artistry</p>
+            <button class="cta-button" onclick="scrollToSection('gallery')">Explore Our Work</button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
 
-  <section id="services" class="services">
-    <h2>Our Collections</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Roses</h3>
-        <p>Classic and timeless, our roses come in a variety of colors to express any sentiment.</p>
-      </div>
-      <div class="card">
-        <h3>Tulips</h3>
-        <p>Bright and cheerful, tulips are perfect for spring arrangements and special occasions.</p>
-      </div>
-      <div class="card">
-        <h3>Daisies</h3>
-        <p>Simple and elegant, daisies bring a touch of innocence and charm to any bouquet.</p>
-      </div>
-      <div class="card">
-        <h3>Orchids</h3>
-        <p>Exotic and sophisticated, our orchids add a luxurious flair to your home or event.</p>
-      </div>
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Our Floral Gallery</h2>
+            <p class="section-subtitle">Each arrangement tells a unique story of beauty and elegance</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-image="images/pink_ranunculus.jpg">
+                    <img src="images/pink_ranunculus.jpg" alt="Pink Ranunculus Bouquet">
+                    <div class="gallery-overlay">
+                        <h3>Romantic Ranunculus</h3>
+                        <p>Soft pink perfection</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-image="images/red_rose.jpg">
+                    <img src="images/red_rose.jpg" alt="Red Rose with Dewdrops">
+                    <div class="gallery-overlay">
+                        <h3>Morning Dew Rose</h3>
+                        <p>Passionate elegance</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-image="images/colorful_arrangement.jpg">
+                    <img src="images/colorful_arrangement.jpg" alt="Colorful Floral Arrangement">
+                    <div class="gallery-overlay">
+                        <h3>Vibrant Medley</h3>
+                        <p>Celebration of colors</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-image="images/garden_ranunculus.jpg">
+                    <img src="images/garden_ranunculus.jpg" alt="Garden Ranunculus">
+                    <div class="gallery-overlay">
+                        <h3>Garden Dreams</h3>
+                        <p>Natural beauty</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-image="images/orange_tulip.jpg">
+                    <img src="images/orange_tulip.jpg" alt="Orange Tulip with Dewdrops">
+                    <div class="gallery-overlay">
+                        <h3>Spring Awakening</h3>
+                        <p>Fresh beginnings</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-image="images/purple_cosmos.jpg">
+                    <img src="images/purple_cosmos.jpg" alt="Purple Cosmos Flower">
+                    <div class="gallery-overlay">
+                        <h3>Cosmic Beauty</h3>
+                        <p>Delicate wonder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-carousel">
+                <div class="service-card">
+                    <div class="service-icon">🌸</div>
+                    <h3>Wedding Florals</h3>
+                    <p>Create the perfect atmosphere for your special day with our bespoke wedding arrangements.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎉</div>
+                    <h3>Event Design</h3>
+                    <p>Transform any space with our stunning event florals and decorative arrangements.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💐</div>
+                    <h3>Custom Bouquets</h3>
+                    <p>Personalized bouquets crafted with love for any occasion or celebration.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏡</div>
+                    <h3>Home Decor</h3>
+                    <p>Bring nature indoors with our beautiful home and office floral arrangements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Bloom & Blossom</h2>
+                    <p>With over a decade of experience in floral design, we are passionate about creating extraordinary arrangements that capture the essence of nature's beauty. Our team of skilled florists combines traditional techniques with modern aesthetics to deliver stunning results.</p>
+                    <p>Every flower tells a story, and we believe in crafting narratives that speak to the heart. From intimate gatherings to grand celebrations, we bring your vision to life with creativity, precision, and an unwavering commitment to excellence.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Arrangements</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/colorful_arrangement.jpg" alt="Our floral workspace">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-background">
+            <img src="images/purple_cosmos.jpg" alt="Purple cosmos background">
+            <div class="contact-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's create something beautiful together</p>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Select a Service</option>
+                                <option value="wedding">Wedding Florals</option>
+                                <option value="event">Event Design</option>
+                                <option value="bouquet">Custom Bouquets</option>
+                                <option value="home">Home Decor</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Tell us about your vision..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h4>Visit Our Studio</h4>
+                            <p>123 Blossom Street<br>Garden District, FL 12345</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Call Us</h4>
+                            <p>(555) 123-BLOOM<br>Mon-Sat: 9AM-6PM</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Email</h4>
+                            <p>hello@bloomandblossom.com<br>info@bloomandblossom.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Bloom & Blossom</h3>
+                    <p>Creating beauty, one flower at a time</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Pinterest">📌</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bloom & Blossom. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" id="lightboxClose">&times;</span>
+            <img src="" alt="" id="lightboxImage">
+        </div>
     </div>
-  </section>
 
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>At Bloom & Blossom, we believe in delivering more than just flowers. We curate experiences that celebrate life's special moments. From hand-picked stems to personalized arrangements, our passion is to spread joy through the language of flowers.</p>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Get in Touch</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Bloom & Blossom. All rights reserved.</p>
-    <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
-  </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
+

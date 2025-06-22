@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProPave Asphalt Contractors - Professional Asphalt Paving Services</title>
+    <meta name="description" content="Professional asphalt contractors specializing in driveways, parking lots, and commercial paving. Over 20 years of experience. Free estimates available.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>ProPave Asphalt</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Professional Asphalt Contractors - Quality Paving Solutions</h1>
+            <p class="hero-subtitle">From residential driveways to commercial parking lots, we deliver durable asphalt paving services with over 20 years of experience. Get your free estimate today and see why we're the trusted choice for quality asphalt work.</p>
+            <a href="#contact" class="cta-button">Get Your Free Estimate</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/image1.jpg" alt="Professional asphalt paving crew at work" />
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Asphalt Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3>Asphalt Paving & Installation</h3>
+                    <p>Transform your property with professional asphalt paving services. We handle everything from site preparation to final compaction, ensuring a smooth, durable surface that will last for years.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Driveway Construction & Repair</h3>
+                    <p>Enhance your home's curb appeal and functionality with a professionally paved driveway. We specialize in both new construction and repair of existing surfaces.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Commercial Parking Lot Paving</h3>
+                    <p>Keep your business accessible with professionally paved parking lots. We work efficiently to complete commercial projects on schedule while maintaining the highest quality standards.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Asphalt Repair & Resurfacing</h3>
+                    <p>Extend the life of your existing asphalt with our repair and resurfacing services. From crack filling to complete overlay, we provide cost-effective solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Work</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal('images/image1.jpg')">
+                    <img src="images/image1.jpg" alt="Professional asphalt paving crew">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/image2.jpg')">
+                    <img src="images/image2.jpg" alt="Road construction with asphalt roller">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/image3.jpg')">
+                    <img src="images/image3.jpg" alt="Fresh asphalt paving work">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/image4.jpg')">
+                    <img src="images/image4.jpg" alt="Asphalt compaction process">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/image5.jpg')">
+                    <img src="images/image5.jpg" alt="Commercial asphalt paving">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/image6.jpg')">
+                    <img src="images/image6.jpg" alt="Road paving equipment">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/image7.jpg')">
+                    <img src="images/image7.jpg" alt="Commercial parking lot paving">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('images/image8.jpg')">
+                    <img src="images/image8.jpg" alt="Asphalt paving professional work">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Why Choose ProPave Asphalt Contractors?</h2>
+                    <p>With over 20 years of experience in the asphalt industry, ProPave Asphalt Contractors has built a reputation for excellence in paving, repair, and maintenance. Our team of skilled professionals brings expertise, reliability, and attention to detail to every project.</p>
+                    <p>We pride ourselves on using only the highest quality materials and state-of-the-art equipment to ensure every job meets our exacting standards. Our commitment to customer satisfaction and timely project completion has made us the preferred choice for property owners throughout the region.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>20+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>1000+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Satisfaction Rate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/image2.jpg" alt="Professional asphalt paving equipment">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"ProPave did an excellent job on our commercial parking lot. The crew was professional, the work was completed on time, and the quality exceeded our expectations. We've already scheduled them for our other properties."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Robert K.</h4>
+                        <span>Property Manager</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Our new driveway looks fantastic! The team was courteous, cleaned up thoroughly, and the finished product is exactly what we wanted. Highly recommend ProPave for any asphalt work."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Linda M.</h4>
+                        <span>Homeowner</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"We've used ProPave for multiple projects over the years. Their consistency, reliability, and quality workmanship keep us coming back. They're our go-to asphalt contractors."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Mark T.</h4>
+                        <span>General Contractor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get Your Free Estimate</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(555) 789-0123</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@propaveasphalt.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>456 Industrial Drive, Riverside, State 67890</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Mon-Fri: 7AM-6PM, Sat: 8AM-4PM</span>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Select a Service</option>
+                            <option value="paving">Asphalt Paving & Installation</option>
+                            <option value="driveway">Driveway Construction & Repair</option>
+                            <option value="commercial">Commercial Parking Lot Paving</option>
+                            <option value="repair">Asphalt Repair & Resurfacing</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Tell us about your project" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ProPave Asphalt Contractors</h3>
+                    <p>Professional asphalt paving services for residential and commercial properties. Quality workmanship guaranteed.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Asphalt Paving</li>
+                        <li>Driveway Construction</li>
+                        <li>Commercial Paving</li>
+                        <li>Asphalt Repair</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Phone: (555) 789-0123</p>
+                    <p>Email: info@propaveasphalt.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ProPave Asphalt Contractors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Gallery -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
