@@ -142,7 +142,7 @@ h1, h2, h3, h4 {
     height: 100%;
     object-fit: cover;
     transform: scale(1.1);
-    transition: transform 10s ease;
+    /*transition: transform 10s ease;*/
 }
 
 .hero:hover .hero-image {
