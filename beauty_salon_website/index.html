@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance Beauty Salon - Professional Hair & Beauty Services</title>
+    <meta name="description" content="Experience luxury hair and beauty services at Elegance Beauty Salon. Professional stylists, modern facilities, and personalized care for all your beauty needs.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip to main content for screen readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1 class="logo">Elegance</h1>
+                <span class="tagline">Beauty Salon</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <ul class="nav-menu desktop-nav" role="menubar">
+                <li role="none"><a href="#home" role="menuitem" aria-current="page">Home</a></li>
+                <li role="none"><a href="#services" role="menuitem">Services</a></li>
+                <li role="none"><a href="#gallery" role="menuitem">Gallery</a></li>
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+            </ul>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Mobile Navigation -->
+            <div class="mobile-menu" id="mobile-menu" role="menu" aria-hidden="true">
+                <ul class="mobile-nav-list">
+                    <li><a href="#home" role="menuitem">Home</a></li>
+                    <li><a href="#services" role="menuitem">Services</a></li>
+                    <li><a href="#gallery" role="menuitem">Gallery</a></li>
+                    <li><a href="#about" role="menuitem">About</a></li>
+                    <li><a href="#contact" role="menuitem">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero" role="banner">
+            <div class="hero-background">
+                <img src="salon_interior_1.jpg" alt="Elegant beauty salon interior with modern styling chairs and mirrors" class="hero-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <h2 class="hero-title">Transform Your Beauty</h2>
+                <p class="hero-subtitle">Experience luxury hair and beauty services in our modern, welcoming salon</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Book Appointment</a>
+                    <a href="#services" class="btn btn-secondary">Our Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="section-subtitle">Professional beauty treatments tailored to your needs</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <img src="haircut_1.jpg" alt="Professional haircut service" class="service-image">
+                            <div class="service-overlay">
+                                <span class="service-icon">✂️</span>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Hair Cutting & Styling</h3>
+                            <p>Expert cuts and styling for all hair types. From classic to contemporary looks.</p>
+                            <span class="service-price">Starting at $45</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <img src="haircut_2.jpg" alt="Hair coloring service" class="service-image">
+                            <div class="service-overlay">
+                                <span class="service-icon">🎨</span>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Hair Coloring</h3>
+                            <p>Professional coloring services including highlights, balayage, and full color.</p>
+                            <span class="service-price">Starting at $75</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <img src="haircut_3.jpg" alt="Hair treatment service" class="service-image">
+                            <div class="service-overlay">
+                                <span class="service-icon">💆</span>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Hair Treatments</h3>
+                            <p>Nourishing treatments to restore and maintain healthy, beautiful hair.</p>
+                            <span class="service-price">Starting at $35</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <div class="placeholder-image">
+                                <div class="placeholder-content">
+                                    <span class="placeholder-icon">📷</span>
+                                    <p>Add Your Service Photo</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Facial Treatments</h3>
+                            <p>Rejuvenating facial treatments for all skin types and concerns.</p>
+                            <span class="service-price">Starting at $60</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <div class="gallery-background">
+                <img src="salon_interior_2.jpg" alt="Luxury beauty salon interior" class="gallery-bg-image">
+                <div class="gallery-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title light">Our Work</h2>
+                    <p class="section-subtitle light">See the transformations we create</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="haircut_4.jpg" alt="Before and after hair transformation" class="gallery-image">
+                        <div class="gallery-item-overlay">
+                            <h4>Hair Transformation</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="haircut_5.jpg" alt="Professional styling work" class="gallery-image">
+                        <div class="gallery-item-overlay">
+                            <h4>Professional Styling</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item placeholder-gallery">
+                        <div class="placeholder-image">
+                            <div class="placeholder-content">
+                                <span class="placeholder-icon">📷</span>
+                                <p>Add Gallery Photo</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item-overlay">
+                            <h4>Your Work Here</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item placeholder-gallery">
+                        <div class="placeholder-image">
+                            <div class="placeholder-content">
+                                <span class="placeholder-icon">📷</span>
+                                <p>Add Gallery Photo</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item-overlay">
+                            <h4>Your Work Here</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item placeholder-gallery">
+                        <div class="placeholder-image">
+                            <div class="placeholder-content">
+                                <span class="placeholder-icon">📷</span>
+                                <p>Add Gallery Photo</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item-overlay">
+                            <h4>Your Work Here</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item placeholder-gallery">
+                        <div class="placeholder-image">
+                            <div class="placeholder-content">
+                                <span class="placeholder-icon">📷</span>
+                                <p>Add Gallery Photo</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item-overlay">
+                            <h4>Your Work Here</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">About Elegance</h2>
+                        <p class="about-description">
+                            With over 15 years of experience in the beauty industry, Elegance Beauty Salon has been 
+                            transforming looks and boosting confidence. Our team of skilled professionals is dedicated 
+                            to providing exceptional service in a luxurious, welcoming environment.
+                        </p>
+                        <p class="about-description">
+                            We use only the finest products and latest techniques to ensure every client leaves 
+                            feeling beautiful and confident. From precision cuts to stunning color transformations, 
+                            we're here to help you look and feel your absolute best.
+                        </p>
+                        <div class="about-features">
+                            <div class="feature">
+                                <span class="feature-icon">👥</span>
+                                <div>
+                                    <h4>Expert Team</h4>
+                                    <p>Certified professionals with years of experience</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">🏆</span>
+                                <div>
+                                    <h4>Award Winning</h4>
+                                    <p>Recognized for excellence in beauty services</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">✨</span>
+                                <div>
+                                    <h4>Premium Products</h4>
+                                    <p>Only the finest professional-grade products</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-images">
+                        <div class="about-image-main">
+                            <img src="salon_interior_3.jpg" alt="Modern salon interior with professional equipment" class="about-img">
+                        </div>
+                        <div class="about-image-secondary">
+                            <img src="salon_interior_4.jpg" alt="Salon styling area" class="about-img">
+                        </div>
+                        <div class="about-image-placeholder">
+                            <div class="placeholder-image">
+                                <div class="placeholder-content">
+                                    <span class="placeholder-icon">📷</span>
+                                    <p>Add Team Photo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2 class="section-title">Get In Touch</h2>
+                        <p class="section-subtitle">Ready to transform your look? Contact us today!</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="contact-icon">📍</span>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>123 Beauty Street<br>Salon City, SC 12345</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <span class="contact-icon">📞</span>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>(555) 123-4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <span class="contact-icon">⏰</span>
+                                <div>
+                                    <h4>Hours</h4>
+                                    <p>Mon-Fri: 9AM-7PM<br>Sat: 9AM-6PM<br>Sun: 10AM-5PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <span class="contact-icon">✉️</span>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>info@elegancebeauty.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <form class="contact-form" role="form" aria-label="Contact form">
+                            <h3>Book Your Appointment</h3>
+                            
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required aria-required="true">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required aria-required="true">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service">Preferred Service</label>
+                                <select id="service" name="service">
+                                    <option value="">Select a service</option>
+                                    <option value="haircut">Hair Cutting & Styling</option>
+                                    <option value="coloring">Hair Coloring</option>
+                                    <option value="treatment">Hair Treatment</option>
+                                    <option value="facial">Facial Treatment</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your desired look or any special requests..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-background">
+            <img src="salon_interior_5.jpg" alt="Elegant salon interior" class="footer-bg-image">
+            <div class="footer-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Elegance Beauty Salon</h3>
+                    <p>Transforming beauty, one client at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Elegance Beauty Salon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
